@@ -1,4 +1,4 @@
-#### `clean_architecture_cli` is a simple command line tool to generate folder and file structure for your Flutter apps.
+#### Clean Architecture Cli is a simple command line tool to generate folder and file structure for your Flutter apps.
 
 #### To use it, you should do the followings:
 
