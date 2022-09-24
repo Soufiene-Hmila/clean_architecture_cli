@@ -1,6 +1,6 @@
 name: clean_architecture_cli
 description: A simple command line application to generate simple folder and file structure for Flutter Applications
-version: 0.1.4
+version: 0.1.4+1
 homepage: https://github.com/Soufiene-Hmila/clean_architecture_cli.git
 documentation: https://github.com/Soufiene-Hmila/clean_architecture_cli.git
 

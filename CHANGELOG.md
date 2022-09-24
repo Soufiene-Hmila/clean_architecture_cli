@@ -1,3 +1,6 @@
+## 0.1.4+1
+- Add structure screen shoot
+
 ## 0.1.4
 - Fix bug create file
 

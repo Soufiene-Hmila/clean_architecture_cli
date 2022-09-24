@@ -12,3 +12,6 @@ After successful activation, you can use it.
 
     clean_architecture_cli create
 
+And it will generate the following structure:
+
+![structure](https://github.com/Soufiene-Hmila/clean_architecture_cli/tree/main/screenshoots/structure.png)
