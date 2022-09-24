@@ -11,4 +11,3 @@ After successful activation, you can use it.
 ##### 2. Ensure that, you are in the your Flutter project directory, because it will generate folders and files in the `lib` folder. Then write a simple command yo generate:
 
     clean_architecture_cli create
-
