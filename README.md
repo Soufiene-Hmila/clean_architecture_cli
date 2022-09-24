@@ -14,4 +14,4 @@ After successful activation, you can use it.
 
 And it will generate the following structure:
 
-![structure](https://github.com/Soufiene-Hmila/clean_architecture_cli/tree/main/screenshoots/structure.png)
+![structure](https://github.com/Soufiene-Hmila/clean_architecture_cli/blob/main/screenshoots/structure.png)
