@@ -1,7 +1,7 @@
 import 'dart:io';
 
+import '../../content_files/template.dart';
 import '../i_creators.dart';
-
 
 extension FileExtention on FileSystemEntity {
   String get fileName {
@@ -15,61 +15,50 @@ class ImplFileCreator implements IFileCreator {
 
   ImplFileCreator(this.directoryCreator);
 
+
   @override
   Future<void> createNecessaryFiles() async {
     print('creating necessary files...');
 
     await _createFile(
+        'lib',
+        'constant',
+    );
+
+    await _createFile(
       'lib',
-      'injector',
-      filePath: 'injector.dart'
+      'home_page',
+       content: Template.stateFul("homePage")
+    );
+
+    await _createFile(
+        'lib',
+        'injector',
+        content: Template.abstract("injector")
     );
 
   }
 
   Future<void> _createFile(
-    String basePath,
-    String? fileName, {
-    String? filePath,
-  }) async {
-
+      String basePath,
+      String fileName, {
+        String? content,
+      }) async {
     try {
 
-      if(filePath != null){
-        if(fileName != null) {
+      final file = await File('$basePath/${fileName.toLowerCase()}.dart').create();
 
-          final fileContent = await File('lib/content_files/$filePath').readAsString();
-          final file = await File('$basePath/$fileName.dart').create();
-          final writer = file.openWrite();
-          writer.write(fileContent);
-          writer.close();
-
-        } else {
-
-          final fileContent = await File('lib/content_files/$filePath').readAsString();
-          final file = await File('$basePath/$filePath').create();
-          final writer = file.openWrite();
-          writer.write(fileContent);
-          writer.close();
-
-        }
-      } else {
-
-        if(fileName != null) {
-
-          await File('$basePath/$fileName.dart').create();
-
-        }
-
+      if (content != null) {
+        final writer = file.openWrite();
+        writer.write(content);
+        writer.close();
       }
 
     } catch (_) {
-      if(fileName != null) {
-        stderr.write('creating $fileName.dart failed!');
-      } else {
-        stderr.write('creating file failed!');
-      }
+
+      stderr.write('creating ${fileName.toLowerCase()}.dart failed!');
       exit(2);
+
     }
   }
 }

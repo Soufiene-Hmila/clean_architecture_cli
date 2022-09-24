@@ -81,35 +81,35 @@ class ImplDirectoryCreator implements IDirectoryCreator {
       // core directory
       print('creating core directory...');
       await Directory(absCorePath).create();
-      await Directory('$absConfigPath/$_bloc').create();
-      await Directory('$absConfigPath/$_params').create();
-      await Directory('$absConfigPath/$_resources').create();
-      await Directory('$absConfigPath/$_useCase').create();
-      await Directory('$absConfigPath/$_utils').create();
+      await Directory('$absCorePath/$_bloc').create();
+      await Directory('$absCorePath/$_params').create();
+      await Directory('$absCorePath/$_resources').create();
+      await Directory('$absCorePath/$_useCase').create();
+      await Directory('$absCorePath/$_utils').create();
 
 
       // data directory
       print('creating data directory...');
       await Directory(absDataPath).create();
-      await Directory('$absConfigPath/$_dataSources').create();
-      await Directory('$absConfigPath/$_models').create();
-      await Directory('$absConfigPath/$_repositories').create();
+      await Directory('$absDataPath/$_dataSources').create();
+      await Directory('$absDataPath/$_models').create();
+      await Directory('$absDataPath/$_repositories').create();
 
 
       // domain directory
       print('creating domain directory...');
       await Directory(absDomainPath).create();
-      await Directory('$absConfigPath/$_entities').create();
-      await Directory('$absConfigPath/$_repositories').create();
-      await Directory('$absConfigPath/$_useCases').create();
+      await Directory('$absDomainPath/$_entities').create();
+      await Directory('$absDomainPath/$_repositories').create();
+      await Directory('$absDomainPath/$_useCases').create();
 
 
       // presentation directory
       print('creating presentation directory...');
       await Directory(absPresentationPath).create();
-      await Directory('$absConfigPath/$_blocs').create();
-      await Directory('$absConfigPath/$_views').create();
-      await Directory('$absConfigPath/$_widgets').create();
+      await Directory('$absPresentationPath/$_blocs').create();
+      await Directory('$absPresentationPath/$_views').create();
+      await Directory('$absPresentationPath/$_widgets').create();
 
 
       return true;
