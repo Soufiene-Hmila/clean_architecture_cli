@@ -1,4 +1,4 @@
-## 0.1.4+1
+## 0.1.4+2
 - Add structure screen shoot
 
 ## 0.1.4
